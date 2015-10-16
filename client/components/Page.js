@@ -3,6 +3,7 @@ var $ = require('jQuery');
 
 var SelectedView = require('./SelectedView');
 var OptionsView = require('./OptionsView');
+var Footer = require('./Footer');
 
 var Page = React.createClass({
 
@@ -46,7 +47,14 @@ var Page = React.createClass({
           console.log(people2.results);
           this.state.options = this.state.options.concat(people2.results);
           this.setState({});
-          console.log('new options',this.state.options)
+          // console.log('new options',this.state.options);
+
+          //get page 3
+          $.get(people2.next, function(people3) {
+            this.state.options = this.state.options.concat(people3.results);
+            this.setState({});
+          }.bind(this));
+
         }.bind(this));
 
         // set default selected to Luke
@@ -59,10 +67,15 @@ var Page = React.createClass({
 
     render : function() {
       return (
-        <div style={style}>
-          <SelectedView selected={this.state.selected} />
-          <br />
-          <OptionsView options={this.state.options} updateSelected={this.updateSelected} />
+        <div id="container" style={style}>
+
+          <div id="content">
+            <SelectedView selected={this.state.selected} />
+            <br />
+            <OptionsView options={this.state.options} updateSelected={this.updateSelected} />
+          </div>
+
+          <Footer/>
         </div>
       )
     }

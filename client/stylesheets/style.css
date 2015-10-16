@@ -1,8 +1,22 @@
 body {
   background-color: #151515;
   font-family: 'Open Sans', sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 #sw-header {
   color: yellow;
+}
+
+#container {
+  min-height: 100%;
+  position: relative;
+}
+
+#content {
+  height: 100%;
+  padding: 10px;
+  padding-bottom: 100px;
 }
