@@ -17,13 +17,22 @@ var Page = React.createClass({
         this.state.selected.home = home.name;
         this.setState({});
       }.bind(this));
+
+      if(!this.state.species[selection.species]) {
+        $.get(selection.species, function(species) {
+          this.state.selected.speciesName = species.name;
+          this.setState({});
+        }.bind(this));
+      }
+
     },
 
     // Lifecycle methods:
     getInitialState : function() {
       return ({
         selected : {},
-        options : []
+        options : [],
+        species : {}
       });
     },
 
@@ -62,6 +71,13 @@ var Page = React.createClass({
           this.state.selected.home = home.name;
           this.setState({});
         }.bind(this));
+
+        $.get(people1.results[0].species, function(species) {
+          console.log('species',species.name);
+          this.state.selected.speciesName = species.name;
+          this.setState({});
+        }.bind(this));
+
       }.bind(this));
     },
 

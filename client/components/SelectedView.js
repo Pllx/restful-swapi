@@ -22,7 +22,8 @@ var SelectedView = React.createClass({
 
 var style = {
   backgroundColor: '#900',
-  color: '#FC0'
+  color: '#FC0',
+  padding: '5px'
 };
 
 module.exports = SelectedView;
