@@ -3,6 +3,7 @@ var $ = require('jQuery');
 
 var SelectedView = require('./SelectedView');
 var OptionsView = require('./OptionsView');
+var Header = require('./Header');
 var Footer = require('./Footer');
 
 var Page = React.createClass({
@@ -85,13 +86,15 @@ var Page = React.createClass({
       return (
         <div id="container" style={style}>
 
+          <Header />
+          <div id="navbar"></div>
           <div id="content">
+            <br /><br />
             <SelectedView selected={this.state.selected} />
             <br />
             <OptionsView options={this.state.options} updateSelected={this.updateSelected} />
           </div>
 
-          <Footer/>
         </div>
       )
     }

@@ -52,23 +52,3 @@ gulp.task('scripts', function() {
 gulp.task('default', ['scripts'], function() {
   return buildScript('main.js', true);
 });
-
-// function scripts() {
-//   var bundle = browserify('./client/main.js')
-//   var watcher = watchify(bundle);
-//
-//   return watcher
-//     .on('update', function(){
-//       var updateStart = Date.now();
-//       watcher
-//         .transform(reactify)
-//         .bundle()
-//         .on('error', function(e) {
-//           console.log('Error compiling components', e.message);
-//         })
-//         .pipe(source('bundle.js'))
-//         .pipe(gulp.dest('./client/build'));
-//       console.log('Updated!', (Date.now() - updateStart + 'ms'));
-//     })
-//
-// }

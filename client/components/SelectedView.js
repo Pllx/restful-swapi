@@ -21,9 +21,15 @@ var SelectedView = React.createClass({
 );
 
 var style = {
-  backgroundColor: '#900',
-  color: '#FC0',
-  padding: '5px'
+  background: 'url("../assets/banner.jpg")',
+  //backgroundColor: '#001821',
+  color: 'white',
+  paddingTop: '5px',
+  width: '25%',
+  margin: '0 auto',
+  border: '1px #01b2f1 solid',
+  textAlign: 'center'
+//  marginTop: '30px'
 };
 
 module.exports = SelectedView;

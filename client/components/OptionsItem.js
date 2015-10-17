@@ -23,14 +23,20 @@ var OptionsItem = React.createClass({
 );
 
 var style = {
-  backgroundColor: '#FC0',
-  color : '#900',
+  backgroundImage: 'url(//a.dilcdn.com/sw/shared/bg_hash_top-052a93931374.png)',
+  backgroundSize : '7px',
+  backgroundRepeat: 'repeat-x',
+  backgroundPosition: 'top left',
+  backgroundColor: '#282727',
+  color : 'white',
+  cursor: 'pointer',
   border: 'black 1px solid',
   width: '100px',
-  height: '100px',
+  height: '60px',
   display: 'inline-block',
   margin: '5px',
   padding: '5px',
+  paddingTop: '35px',
   verticalAlign: 'top'
 };
 

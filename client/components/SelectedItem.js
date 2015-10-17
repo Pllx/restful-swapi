@@ -21,9 +21,10 @@ var SelectedItem = React.createClass({
 });
 
 var style = {
-  backgroundColor: '#f2f2f2',
-  color: 'black',
-  padding: '5px'
+  backgroundColor: '#001821',
+  color: 'white',
+  padding: '5px',
+  textAlign: 'left'
 };
 
 module.exports = SelectedItem;

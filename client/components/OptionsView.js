@@ -26,6 +26,10 @@ var OptionsView = React.createClass({
 );
 
 var style = {
+  width: '70%',
+  margin: '0 auto',
+  padding: '0 auto',
+  textAlign: 'center'
   //backgroundColor: 'midnightblue',
   //color: '#FFCC00',
 };
